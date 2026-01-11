@@ -51,10 +51,10 @@ public class Account implements UserDetails {
     private Boolean isEnabled;
 
     @Column(nullable = false)
-    private String activationCode;
+    private String activationToken;
 
     @Column(nullable = false)
-    private Instant activationCodeExpireAt;
+    private Instant activationTokenExpireAt;
 
     /* Logs data */
     @Column(nullable = false, updatable = false)
@@ -80,8 +80,8 @@ public class Account implements UserDetails {
         loginAttempts = 0;
 
         isEnabled = false;
-        this.activationCode = UUID.randomUUID().toString();
-        this.activationCodeExpireAt = now.plusSeconds(3600);
+        this.activationToken = UUID.randomUUID().toString();
+        this.activationTokenExpireAt = now.plusSeconds(3600);
     }
 
     @Override
