@@ -1,5 +1,5 @@
 CREATE SCHEMA IF NOT EXISTS auth;
 
-CREATE TABLE auth.users (
+CREATE TABLE auth.accounts (
     id UUID PRIMARY KEY
 );

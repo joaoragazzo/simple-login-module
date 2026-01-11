@@ -9,4 +9,14 @@ spring:
         enabled: true
         locations: 
             - classpath:db/migration/auth
-        baseline-on-migrate: true
+        schemas: auth
+        create-schemas: true
+        baseline-on-migrate: false
+
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                
