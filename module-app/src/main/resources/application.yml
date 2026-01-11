@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/simple_login_db
+        username: admin
+        password: admin
+        driver-class-name: org.postgresql.Driver
+    
+    flyway:
+        enabled: true
+        locations: 
+            - classpath:db/migration/auth
+            - classpath:db/migration/user
+        baseline-on-migrate: true
