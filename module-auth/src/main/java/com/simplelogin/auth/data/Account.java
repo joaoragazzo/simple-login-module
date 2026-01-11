@@ -32,7 +32,8 @@ import lombok.Setter;
 public class Account implements UserDetails {
     
     @Id
-    @UuidGenerator
+    @UuidGenerator(style = UuidGenerator.Style.TIME)
+    @Column(nullable = false, updatable = false)
     private UUID id;
 
     @Column(nullable = false, unique = true, updatable = false)

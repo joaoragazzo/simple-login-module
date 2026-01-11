@@ -1,0 +1,15 @@
+ALTER TABLE auth.users 
+    ADD COLUMN email VARCHAR(255) NOT NULL UNIQUE,
+    ADD COLUMN hashed_password VARCHAR(255) NOT NULL,
+    
+    ADD COLUMN login_attempts INTEGER NOT NULL DEFAULT 0,
+    ADD COLUMN is_locked_until TIMESTAMP WITH TIME ZONE,
+    
+    ADD COLUMN is_enabled BOOLEAN NOT NULL DEFAULT FALSE,
+    ADD COLUMN activation_code VARCHAR(255) NOT NULL,
+    ADD COLUMN activation_code_expire_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    
+    ADD COLUMN created_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    ADD COLUMN updated_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    ADD COLUMN last_login_at TIMESTAMP WITH TIME ZONE,
+    ADD COLUMN last_successful_login_ip_address VARCHAR(45);
