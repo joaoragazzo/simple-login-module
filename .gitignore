@@ -1,0 +1,36 @@
+### Java e Maven ###
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+### Logs ###
+*.log
+logs/
+
+### IDE - VS Code ###
+.vscode/
+.factorypath
+.project
+.classpath
+.settings/
+*.code-workspace
+
+### IDE - IntelliJ ###
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+### Sistema Operacional (Linux/Arch) ###
+.DS_Store
+.fuse_hidden*
+.directory
+.Trash-*
+*~
+
+### Banco de Dados e Docker ###
+.docker-data/
+postgres-data/
